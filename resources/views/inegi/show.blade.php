@@ -14,6 +14,7 @@
         <p>INEGI_API_BASE_URL=https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR</p>
         <p>INEGI_API_TOKEN=8a70e3c8-d06a-eac7-f046-cc5ec0d017d9</p>
         <small>el api token lo generan en la pagina deL INEGI</small>
+        <small>pueden probar con la siguiente url: http://127.0.0.1:8000/inegi/1002000058,1002000061,1002000004,1002000007,1002000064,1002000067,1002000070,1002000073,1002000076,1002000079,5000000002</small>
         @if (isset($data['error']) && $data['error'])
             <div class="alert alert-danger" role="alert">
                 Error: {{ $data['message'] }}
@@ -44,6 +45,30 @@
             @endforeach
         @endif
     </div>
+    <!-- Widget de Ciclos económicos -->
+    <div class="container mt-5">
+        <iframe id='IframeCicloseconomicos' src='https://www.inegi.org.mx/widgets/cicloseconomicos/index.html ' frameborder=0 width='100%' height='618px' ></iframe>
+    </div>
+    <!-- Widget Generales -->
+    <div class="container mt-5">
+        <h2>widgets</h2>
+        <div class="row">
+            <div class="col-4">
+                <h3>Tendencias Economicas</h3>
+                <iframe scrolling="no" frameborder="0" src="https://www.inegi.org.mx/widgets/tendencias/default.html" height="390" width="310"></iframe>
+            </div>
+            <div class="col-4">
+                <h3>Índice de precios</h3>
+                <iframe id='ifrmINP' src='https://www.inegi.org.mx/widgets/inp/indicedeprecios.html' frameborder=0 width='230' height='370' ></iframe>
+            </div>
+            <div class="col-4">
+                <h3>Censo de Poblacion</h3>
+                <iframe id='frmCPV' src='https://www.inegi.org.mx/widgets/cpv/2020/poblacion.html' frameborder='0' scrolling='no' width='240' height='350' ></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="container"></div>
+    <div class="container mt-5"></div>
     <!-- Carrusel -->
     <style>
         .carousel-item {
