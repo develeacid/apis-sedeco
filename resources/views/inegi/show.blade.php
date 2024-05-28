@@ -11,6 +11,7 @@
     <div class="container mt-5">
         <h1>Información de INEGI</h1>
         <p>datos necesario a configurar en archivo .env</p>
+        <small>composer require guzzlehttp/guzzle</small>
         <p>INEGI_API_BASE_URL=https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR</p>
         <p>INEGI_API_TOKEN=8a70e3c8-d06a-eac7-f046-cc5ec0d017d9</p>
         <small>el api token lo generan en la pagina deL INEGI</small>
